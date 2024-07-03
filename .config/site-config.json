@@ -1,0 +1,11 @@
+{
+  "title": "Docs",
+  "tagline": "Official documentation for ExampleMDRepo.",
+  "url": "https://example-md-docs.test.aelf.dev",
+  "repo": "https://github.com/yongenaelf/example-md-repo",
+  "logo": {
+    "alt": "Site Logo",
+    "src": "img/logo.svg",
+    "srcDark": "img/logo_dark.svg"
+  }
+}
