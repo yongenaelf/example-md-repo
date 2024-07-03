@@ -16,6 +16,12 @@ jobs:
           owner: yongenaelf
           repositories: common-docs-repo
 
+      - name: Set short git commit SHA
+        id: vars
+        run: |
+          calculatedSha=$(git rev-parse --short ${{ github.sha }})
+          echo "short_sha=$calculatedSha" >> "$GITHUB_OUTPUT"
+
       - name: Use the token
         uses: actions/github-script@v6
         with:
@@ -29,5 +35,6 @@ jobs:
               inputs: {
                 repo: "${{ github.repository }}",
                 branch: "${{ github.event.ref }}",
+                commit_sha: 'sha-${{ steps.vars.outputs.short_sha }}',
               }
             })
