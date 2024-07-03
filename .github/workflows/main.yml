@@ -7,6 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          
       - name: Generate a token
         id: generate-token
         uses: actions/create-github-app-token@v1
