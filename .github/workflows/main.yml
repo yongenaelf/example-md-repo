@@ -26,4 +26,8 @@ jobs:
               repo: 'common-docs-repo',
               workflow_id: 'main.yml',
               ref: 'main',
+              inputs: {
+                repo: "${{ github.repository }}",
+                branch: "${{ github.event.ref }}",
+              }
             })
