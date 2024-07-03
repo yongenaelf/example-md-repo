@@ -22,6 +22,6 @@ jobs:
             await github.rest.actions.createWorkflowDispatch({
               owner: 'yongenaelf',
               repo: 'common-docs-repo',
-              workflow_id: 'main.yaml',
+              workflow_id: 'main.yml',
               ref: 'main',
             })
